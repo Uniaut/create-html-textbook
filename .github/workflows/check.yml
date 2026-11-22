@@ -1,0 +1,17 @@
+name: Check example
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/verify_links.py examples/python-to-cpp/docs
+      - run: node --check assets/app.js
+      - run: |
+          cmp assets/app.js examples/python-to-cpp/docs/assets/app.js
+          cmp assets/style.css examples/python-to-cpp/docs/assets/style.css
+          c++ -std=c++17 -Wall -Wextra -pedantic -fsyntax-only examples/python-to-cpp/lab/grid.cpp

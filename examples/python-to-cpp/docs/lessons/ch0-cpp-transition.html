@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Python 풀이를 C++로 옮기기 | C++ 코딩 테스트</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script defer src="../assets/app.js"></script>
+</head>
+<body>
+  <div class="topbar"><button class="btn" type="button" data-menu-toggle>목차</button></div>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">C++ 코딩 테스트</a>
+      <p class="brand-sub">Python Platinum V → C++ Gold V</p>
+      <div class="sidebar-controls"><button class="btn" type="button" data-theme-toggle>테마</button></div>
+      <nav aria-label="교과서 목차">
+        <ul class="nav-list">
+          <li><a class="" href="../index.html">학습 안내</a></li>
+<li><a class="active" href="ch0-cpp-transition.html" aria-current="page">0. 구현 전환</a></li>
+<li><a class="" href="ch1-grid-bfs.html">1. 격자 BFS</a></li>
+<li><a class="nav-sub" href="ch1-1-const-reference.html">└ 1.1 참조와 복사</a></li>
+<li><a class="" href="ch2-mock.html">2. 모의 코딩 테스트</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main">
+      <article class="content">
+        <h1>Python 풀이를 C++로 옮기기</h1>
+        <p>알고리즘을 선택한 다음 컨테이너와 정수 범위를 먼저 적어 보세요. Python에서 암묵적으로 처리하던 두 가지가 C++ 구현의 출발점입니다.</p>
+<h2>자료구조 대응</h2>
+<table><thead><tr><th>Python</th><th>C++17</th><th>차이</th></tr></thead><tbody>
+<tr><td><code>list</code></td><td><code>std::vector&lt;T&gt;</code></td><td>요소 타입을 고정한다.</td></tr>
+<tr><td><code>deque</code> (FIFO)</td><td><code>std::queue&lt;T&gt;</code></td><td><code>front()</code>로 읽고 <code>pop()</code>으로 제거한다.</td></tr>
+<tr><td><code>dict</code></td><td><code>std::unordered_map&lt;K,V&gt;</code></td><td><code>operator[]</code>는 없는 키를 삽입한다. 존재 여부는 <code>find()</code>로 검사한다.</td></tr>
+</tbody></table>
+<h2>손으로 검증하기</h2>
+<p>정수 200,000개가 각각 최대 10억일 때 합의 최댓값을 계산하고 누적 변수의 타입을 정하세요. 곱셈을 할 때는 결과를 저장하기 전에 피연산자의 타입이 결정된다는 점도 확인하세요.</p>
+<h2>완료 체크</h2>
+<ul><li>빈 큐에서 <code>front()</code>를 호출하지 않는다.</li><li><code>200000LL * 1000000000</code>이 필요한 이유를 설명한다.</li></ul>
+        <nav class="pager" aria-label="이전 및 다음 장"><a href="../index.html">← 학습 안내</a> <a href="ch1-grid-bfs.html">1. 격자 BFS →</a></nav>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

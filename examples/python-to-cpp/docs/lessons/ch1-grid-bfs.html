@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>격자 BFS를 C++로 구현하기 | C++ 코딩 테스트</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script defer src="../assets/app.js"></script>
+</head>
+<body>
+  <div class="topbar"><button class="btn" type="button" data-menu-toggle>목차</button></div>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">C++ 코딩 테스트</a>
+      <p class="brand-sub">Python Platinum V → C++ Gold V</p>
+      <div class="sidebar-controls"><button class="btn" type="button" data-theme-toggle>테마</button></div>
+      <nav aria-label="교과서 목차">
+        <ul class="nav-list">
+          <li><a class="" href="../index.html">학습 안내</a></li>
+<li><a class="" href="ch0-cpp-transition.html">0. 구현 전환</a></li>
+<li><a class="active" href="ch1-grid-bfs.html" aria-current="page">1. 격자 BFS</a></li>
+<li><a class="nav-sub" href="ch1-1-const-reference.html">└ 1.1 참조와 복사</a></li>
+<li><a class="" href="ch2-mock.html">2. 모의 코딩 테스트</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main">
+      <article class="content">
+        <h1>격자 BFS를 C++로 구현하기</h1>
+        <p>Python의 <code>deque</code>로 작성하던 최단 경로를 C++17로 옮깁니다. 큐에 넣는 시점에 거리를 기록해 각 칸이 한 번만 들어가도록 설계합니다.</p>
+<h2>문제</h2>
+<p>첫 줄에 행과 열(각 1~1,000), 다음 줄부터 격자가 주어집니다. <code>.</code>은 통로이고 <code>#</code>은 벽입니다. 양 끝점은 통로입니다. 왼쪽 위에서 오른쪽 아래까지 상하좌우로 이동할 때 최단 이동 횟수를 출력하세요. 도달할 수 없다면 <code>-1</code>을 출력하세요.</p>
+<h2>큐와 거리 배열</h2>
+<p><code>std::queue&lt;std::pair&lt;int, int&gt;&gt;</code>는 처리할 칸을 담고, 거리 배열의 <code>-1</code>은 미방문을 뜻합니다. 거리 0과 미방문을 분리하면 1×1 격자도 같은 규칙으로 처리할 수 있습니다.</p>
+<p>함수의 <code>const std::vector&lt;std::string&gt;&amp;</code>가 낯설다면 <a href="ch1-1-const-reference.html">1.1 참조와 복사</a>를 먼저 읽으세요.</p>
+<h2>실습 및 검증</h2>
+<p><a href="../../lab/grid.cpp">grid.cpp</a>의 <code>shortest_path</code>를 구현하세요. 예제 폴더의 <code>lab/</code>에서 아래 명령을 실행합니다. 시작 상태에서는 막힌 격자만 통과합니다.</p>
+<div class="code-block cmd"><pre><code>c++ -std=c++17 -Wall -Wextra -pedantic grid.cpp -o grid
+python3 check.py ./grid</code></pre></div>
+<p>네 테스트를 통과하고 시간과 추가 공간이 모두 <code>O(행 × 열)</code>인 이유를 설명하면 완료입니다.</p>
+        <nav class="pager" aria-label="이전 및 다음 장"><a href="ch0-cpp-transition.html">← 0. 구현 전환</a> <a href="ch1-1-const-reference.html">1.1 참조와 복사 →</a></nav>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

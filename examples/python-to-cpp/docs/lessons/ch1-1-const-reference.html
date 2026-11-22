@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>격자를 복사 없이 전달하기 | C++ 코딩 테스트</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script defer src="../assets/app.js"></script>
+</head>
+<body>
+  <div class="topbar"><button class="btn" type="button" data-menu-toggle>목차</button></div>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">C++ 코딩 테스트</a>
+      <p class="brand-sub">Python Platinum V → C++ Gold V</p>
+      <div class="sidebar-controls"><button class="btn" type="button" data-theme-toggle>테마</button></div>
+      <nav aria-label="교과서 목차">
+        <ul class="nav-list">
+          <li><a class="" href="../index.html">학습 안내</a></li>
+<li><a class="" href="ch0-cpp-transition.html">0. 구현 전환</a></li>
+<li><a class="" href="ch1-grid-bfs.html">1. 격자 BFS</a></li>
+<li><a class="nav-sub active" href="ch1-1-const-reference.html" aria-current="page">└ 1.1 참조와 복사</a></li>
+<li><a class="" href="ch2-mock.html">2. 모의 코딩 테스트</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main">
+      <article class="content">
+        <h1>격자를 복사 없이 전달하기</h1>
+        <p>격자 BFS의 입력은 함수 안에서 읽기만 합니다. <code>const T&amp;</code>로 받으면 호출자가 가진 객체를 그대로 읽고, 함수에서는 그 참조를 통해 수정할 수 없습니다.</p>
+<h2>시그니처 비교</h2>
+<table><thead><tr><th>매개변수</th><th>기존 변수로 호출했을 때</th></tr></thead><tbody>
+<tr><td><code>T grid</code></td><td>별도 복사본을 받는다.</td></tr>
+<tr><td><code>T&amp; grid</code></td><td>원본에 접근하고 수정할 수 있다.</td></tr>
+<tr><td><code>const T&amp; grid</code></td><td>복사 없이 원본을 읽는다.</td></tr>
+</tbody></table>
+<h2>작게 확인하기</h2>
+<p>격자 실습 파일을 복사한 뒤 <code>shortest_path</code>에 <code>grid[0][0] = '#';</code>를 넣고 컴파일해 보세요. 오류가 발생하는 줄을 확인한 다음 변경을 지우세요. 거리나 방문 여부는 별도 배열에 기록합니다.</p>
+<h2>부모 장으로 돌아가기</h2>
+<p><a href="ch1-grid-bfs.html">격자 BFS 실습</a>의 함수 시그니처를 유지하면서 네 케이스를 통과시키세요.</p>
+        <nav class="pager" aria-label="이전 및 다음 장"><a href="ch1-grid-bfs.html">← 1. 격자 BFS</a> <a href="ch2-mock.html">2. 모의 코딩 테스트 →</a></nav>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
