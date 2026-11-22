@@ -1,4 +1,4 @@
-# Adaptive HTML Study
+# Create HTML Textbook
 
 [한국어](README.md) · English
 
@@ -18,16 +18,16 @@ From the root of a project that uses Codex:
 
 ```sh
 mkdir -p .agents/skills
-git clone https://github.com/Uniaut/adaptive-html-study.git .agents/skills/adaptive-html-study
+git clone https://github.com/Uniaut/create-html-textbook.git .agents/skills/create-html-textbook
 ```
 
 Then invoke the skill with a request like this:
 
-> $adaptive-html-study I solve BOJ problems up to Platinum V in Python. Build an offline HTML textbook to help me prepare for coding tests in C++17, targeting Gold V. Give me starter code and tests for the exercises.
+> $create-html-textbook I solve BOJ problems up to Platinum V in Python. Build an offline HTML textbook to help me prepare for coding tests in C++17, targeting Gold V. Give me starter code and tests for the exercises.
 
 A follow-up that exercises the branching workflow:
 
-> $adaptive-html-study I’m stuck on const T& in the grid BFS chapter. Add a follow-up chapter that explains references and copies.
+> $create-html-textbook I’m stuck on const T& in the grid BFS chapter. Add a follow-up chapter that explains references and copies.
 
 Reading and navigation work offline. Opening an AI provider requires a connection and sends the chapter topics or selected text and nearby context to the chosen provider.
 

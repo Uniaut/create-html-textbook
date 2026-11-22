@@ -1,10 +1,10 @@
 ---
-name: adaptive-html-study
+name: create-html-textbook
 license: MIT
 description: Build or update offline HTML study textbooks with sidebar navigation, skeleton-first labs, and follow-up subchapters. Use when a learner asks for an HTML study guide or needs a prerequisite or unclear concept added to an existing textbook.
 ---
 
-# Adaptive HTML Study
+# Create HTML Textbook
 
 The link checker requires Python 3. Reading only needs a browser. AI providers require internet access.
 

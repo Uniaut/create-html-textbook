@@ -1,4 +1,4 @@
-# Adaptive HTML Study
+# Create HTML Textbook
 
 한국어 · [English](README.en.md)
 
@@ -18,16 +18,16 @@ Codex를 사용하는 프로젝트의 루트에서 실행합니다.
 
 ```sh
 mkdir -p .agents/skills
-git clone https://github.com/Uniaut/adaptive-html-study.git .agents/skills/adaptive-html-study
+git clone https://github.com/Uniaut/create-html-textbook.git .agents/skills/create-html-textbook
 ```
 
 교과서를 처음 만들 때는 현재 수준과 목표를 알려주세요.
 
-> $adaptive-html-study Python으로 백준 플래티넘 V까지 풀어 봤어. C++17로 골드 V 수준의 코딩 테스트를 준비할 수 있게 오프라인 HTML 교과서를 만들어 줘. 실습은 코드 뼈대와 테스트로 구성해 줘.
+> $create-html-textbook Python으로 백준 플래티넘 V까지 풀어 봤어. C++17로 골드 V 수준의 코딩 테스트를 준비할 수 있게 오프라인 HTML 교과서를 만들어 줘. 실습은 코드 뼈대와 테스트로 구성해 줘.
 
 읽다가 막히면 어느 장의 어떤 개념인지 알려주세요.
 
-> $adaptive-html-study 격자 BFS 장에서 const T&가 왜 필요한지 모르겠어. 참조와 복사를 비교하는 보충 장을 추가해 줘.
+> $create-html-textbook 격자 BFS 장에서 const T&가 왜 필요한지 모르겠어. 참조와 복사를 비교하는 보충 장을 추가해 줘.
 
 본문과 목차는 오프라인에서 사용할 수 있습니다. AI 도움말로 외부 서비스를 열 때는 인터넷 연결이 필요하며, 장 제목과 절 제목 또는 선택한 문장과 주변 문맥이 해당 서비스로 전달됩니다.
 
