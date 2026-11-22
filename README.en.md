@@ -2,6 +2,13 @@
 
 [한국어](README.md) · English
 
+> 우리보다 그들이 현명하고 노련해질 수 있다는 사실을 받아들이고 나면
+> 우리가 얼마나 큰 힘을 가지고 있는지 알게된다.
+>
+> 우리는 우리의 스승을 만들 수있는 유일한 종이 되었다는 것을.
+>
+> — [반-바지. (@bahnbazi), 《둘이서 추는 춤》](https://x.com/bahnbazi/status/953307342921060352)
+
 An Agent Skill that turns technical learning requests into offline HTML textbooks. It builds on what the learner already knows, gives them code skeletons and runnable checks, and adds a linked subchapter when a specific prerequisite needs more explanation.
 
 ## Example · Python to C++ for coding tests
