@@ -21,12 +21,9 @@ Python으로 백준 플래티넘 V까지 풀어 본 학습자가 C++17로 골드
 
 ## 설치와 사용
 
-Codex를 사용하는 프로젝트의 루트에서 실행합니다.
+Codex나 Claude Code에 아래 요청을 붙여 넣으세요.
 
-```sh
-mkdir -p .agents/skills
-git clone https://github.com/Uniaut/create-html-textbook.git .agents/skills/create-html-textbook
-```
+> https://github.com/Uniaut/create-html-textbook 저장소의 `create-html-textbook` 스킬을 설치해줘.
 
 교과서를 처음 만들 때는 현재 수준과 목표를 알려주세요.
 

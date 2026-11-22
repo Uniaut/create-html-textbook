@@ -21,12 +21,9 @@ Clone the repository and open the example’s `docs/index.html` directly in a br
 
 ## Install and use
 
-From the root of a project that uses Codex:
+Paste this request into Codex or Claude Code.
 
-```sh
-mkdir -p .agents/skills
-git clone https://github.com/Uniaut/create-html-textbook.git .agents/skills/create-html-textbook
-```
+> Install the `create-html-textbook` skill from https://github.com/Uniaut/create-html-textbook.
 
 Then invoke the skill with a request like this:
 
