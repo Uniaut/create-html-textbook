@@ -18,6 +18,20 @@ The link checker requires Python 3. Reading only needs a browser. AI providers r
 
 The bundled helpers add chapter help on lesson pages and a prompt widget when the learner selects text in the article. Chapter help uses the title and section headings. Selection help includes the selection and nearby context. Learners can copy prompts or open ChatGPT, Claude, or Perplexity. Preserve these controls when rebuilding pages.
 
+### Narrative transitions
+
+Across the article, use short transitions that tell the learner what to do, why it matters, and what to check next. Before a table or exercise, pose the question it will help answer or tell the learner what to look for. Afterwards, interpret the result and connect it to the next step. Use these transitions where the reasoning changes, and vary the phrasing to fit the subject.
+
+> “먼저 순이익과 영업활동 현금흐름을 비교해 봐요. 외상으로 판 물건은 이익에 반영돼도 대금이 아직 들어오지 않았을 수 있어요. 아래 표에서 두 숫자의 차이를 확인한 뒤, 매출채권이 얼마나 늘었는지 살펴봐요.”
+
+### Production process
+
+1. Draft or revise the textbook using the writing rules above and the learner's stated goal.
+2. Review the draft against both criteria:
+   - **Goal coverage:** Does the textbook explain all the concepts and prerequisites the learner needs to reach the goal, given their starting knowledge? Check that exercises and verification cover the skills the learner is expected to demonstrate.
+   - **Narrative continuity:** Read the chapters in order. Do the transitions explain what to do, why it matters, and what to check next? Check that tables and exercises follow from the surrounding explanation and lead into the next step.
+3. If either check fails, return to step 1. Add missing explanations or strengthen the transitions, then repeat both checks. Once both pass, run the verification at the end of this skill.
+
 ## Add a follow-up subchapter
 
 Answer quick questions directly. If the learner asks for an enduring explanation or a prerequisite lesson, add `docs/lessons/ch<X>-<N>-<slug>.html` using the next unused number under chapter X.
