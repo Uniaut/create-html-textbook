@@ -13,6 +13,11 @@ jobs:
           python3 scripts/verify_links.py examples/python-to-cpp/docs
           python3 scripts/verify_links.py examples/value-investing/docs
       - run: node --check assets/app.js
+      - name: Search indexes are up to date
+        run: |
+          python3 scripts/build_search_index.py examples/python-to-cpp/docs
+          python3 scripts/build_search_index.py examples/value-investing/docs
+          git diff --exit-code -- 'examples/*/docs/assets/search-index.js'
       - run: |
           cmp assets/app.js examples/python-to-cpp/docs/assets/app.js
           cmp assets/style.css examples/python-to-cpp/docs/assets/style.css

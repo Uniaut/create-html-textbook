@@ -49,6 +49,12 @@ Clone the repository and open the example’s `docs/index.html` directly in a br
 
 This Korean textbook introduces price and value, profit and cash flow, and the margin of safety. Work through fictional examples and reveal each answer when you are ready. [Open the value investing curriculum](examples/value-investing/docs/index.html)
 
+## Full-text search
+
+Type keywords into the search box below the theme button and press Enter to list every chapter that matches. Spaces separate keywords, and `/` focuses the box from anywhere. Opening a result highlights the keywords in that chapter and jumps to the first occurrence of the first keyword. Use the ‹ › buttons or Enter in the bar at the bottom to step through matches, and Esc to clear them.
+
+To work offline from `file://`, the text is prebuilt into `assets/search-index.js`. After editing or adding chapters, rebuild it with `python3 scripts/build_search_index.py <docs path>`. Try it on the example's [search page](examples/value-investing/docs/search.html).
+
 ## Ask ChatGPT while reading
 
 ### Ask about a whole chapter
@@ -71,7 +77,7 @@ ChatGPT is the default. The provider menu also offers Claude and Perplexity. Rea
 | --- | --- |
 | [SKILL.md](SKILL.md) | Skill discovery metadata and the creation, branching, and verification workflows |
 | [assets/](assets/) | CSS and JavaScript copied into generated textbooks |
-| [scripts/](scripts/) | Python 3 local-link checker |
+| [scripts/](scripts/) | Python 3 local-link checker and search index builder |
 | [examples/python-to-cpp/](examples/python-to-cpp/) | Sample textbook, exercise, and screenshot |
 | [examples/value-investing/](examples/value-investing/) | Value investing textbook and AI help screenshots |
 
@@ -82,4 +88,6 @@ The directory and frontmatter follow the [Agent Skills specification](https://ag
 ```sh
 python3 scripts/verify_links.py examples/python-to-cpp/docs
 python3 scripts/verify_links.py examples/value-investing/docs
+python3 scripts/build_search_index.py examples/python-to-cpp/docs
+python3 scripts/build_search_index.py examples/value-investing/docs
 ```
