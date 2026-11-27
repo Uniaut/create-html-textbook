@@ -49,6 +49,12 @@ Python으로 백준 플래티넘 V까지 풀어 본 학습자가 C++17로 골드
 
 재무제표가 낯선 독자를 위해 가격과 가치, 이익과 현금흐름, 안전마진을 설명합니다. 가상의 문구 회사 사례를 계산하고 각 장에서 접힌 답안을 열어 확인할 수 있습니다. [가치투자 기초 학습 안내](examples/value-investing/docs/index.html)
 
+## 전체 검색
+
+사이드바 테마 버튼 아래 검색창에 키워드를 입력하고 Enter를 누르면, 모든 장에서 일치하는 곳을 찾아 목록으로 보여 줍니다. 키워드는 공백으로 나누고, 어디서든 `/`를 누르면 검색창으로 이동합니다. 결과를 열면 해당 장에서 키워드가 하이라이트되고, 첫 키워드가 처음 나오는 곳으로 바로 이동합니다. 화면 아래 막대의 ‹ › 버튼이나 Enter로 다음 일치로 넘어가고, Esc로 하이라이트를 지웁니다.
+
+오프라인(`file://`)에서도 동작하도록 본문을 `assets/search-index.js`에 미리 담아 둡니다. 장을 고치거나 추가했다면 `python3 scripts/build_search_index.py <docs 경로>`로 다시 만드세요. 직접 써 보려면 예제의 [검색 페이지](examples/value-investing/docs/search.html)를 여세요.
+
 ## 읽다가 막혔을 때 ChatGPT에 질문하기
 
 ### 챕터 전체 질문하기
@@ -71,7 +77,7 @@ Python으로 백준 플래티넘 V까지 풀어 본 학습자가 C++17로 골드
 | --- | --- |
 | [SKILL.md](SKILL.md) | 스킬 검색용 메타데이터와 교과서 작성·보충·검증 절차 |
 | [assets/](assets/) | 교과서에 복사할 CSS와 JavaScript |
-| [scripts/](scripts/) | Python 3 로컬 링크 검사기 |
+| [scripts/](scripts/) | Python 3 로컬 링크 검사기와 검색 인덱스 생성기 |
 | [examples/python-to-cpp/](examples/python-to-cpp/) | 예제 교과서, 실습 코드, 스크린샷 |
 | [examples/value-investing/](examples/value-investing/) | 가치투자 입문 교과서와 AI 도움말 스크린샷 |
 
@@ -82,4 +88,6 @@ Python으로 백준 플래티넘 V까지 풀어 본 학습자가 C++17로 골드
 ```sh
 python3 scripts/verify_links.py examples/python-to-cpp/docs
 python3 scripts/verify_links.py examples/value-investing/docs
+python3 scripts/build_search_index.py examples/python-to-cpp/docs
+python3 scripts/build_search_index.py examples/value-investing/docs
 ```
